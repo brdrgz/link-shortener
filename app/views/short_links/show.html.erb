@@ -1,0 +1,12 @@
+<table>
+  <tbody>
+    <tr>
+      <td>Shortened URL:</td>
+      <td><%= link_to(nil, shortened_url(short_url: @short_link.short_url)) %></td>
+    </tr>
+    <tr>
+      <td>Admin URL:</td>
+      <td><%= link_to(nil, admin_url(admin_url: @short_link.admin_url)) %></td>
+    </tr>
+  </tbody>
+</table>

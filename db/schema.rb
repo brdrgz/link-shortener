@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190419191216) do
+ActiveRecord::Schema.define(version: 2019_06_27_082531) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 20190419191216) do
     t.integer "view_count", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "admin_url", null: false
+    t.boolean "expired", default: false, null: false
+    t.index ["admin_url"], name: "index_short_links_on_admin_url", unique: true
   end
 
 end
